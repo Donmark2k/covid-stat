@@ -5,6 +5,11 @@ import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
 import logo from '../asset/planet.png';
+import { IoSettingsOutline } from 'react-icons/fa';
+import { BiMicrophone } from 'react-icons/fa';
+
+
+
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -18,7 +23,7 @@ function NavBar() {
           <Navbar.Brand href="#">
             <img alt="planet log" src={logo} width={45} height={45} />
             {'  '}
-            Space Traveler&#39;s Hub
+            WEATHER
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
@@ -32,7 +37,7 @@ function NavBar() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                Space Traveler&#39;s Hub
+                Weather
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
@@ -43,7 +48,15 @@ function NavBar() {
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                  Rockets
+                   <span className="profile">
+      <BiMicrophone style={{
+        color: '#0290FF',
+        height: '15px',
+        cursor: 'pointer',
+        transition: 'all ease-in 300ms',
+      }}
+      />
+    </span>
                 </NavLink>
                 <NavLink
                   className="nav-link"
@@ -51,17 +64,17 @@ function NavBar() {
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                  Missions
+                   <span className="profile">
+      <IoSettingsOutline style={{
+        color: '#0290FF',
+        height: '15px',
+        cursor: 'pointer',
+        transition: 'all ease-in 300ms',
+      }}
+      />
+    </span>
                 </NavLink>
-                <div className="d-none d-md-none d-lg-block mt-3 mb-3 vr" />
-                <NavLink
-                  className="nav-link"
-                  to="/profile"
-                  as={Link}
-                  onClick={handleOffcanvasClose}
-                >
-                  My Profile
-                </NavLink>
+               
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

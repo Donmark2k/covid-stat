@@ -2,7 +2,7 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="https://cdn-icons-png.flaticon.com/512/3212/3212567.png" alt="logo" width="140"  height="auto" />
+  <img src="https://cdn.icon-icons.com/icons2/38/PNG/512/overcastday_weather_sun_cloudy_4493.png" alt="logo" width="140"  height="auto" />
   <br/>
   <h3> 🚀 <b>Space Travelers' Hub</b> 🚀</h3>
 
