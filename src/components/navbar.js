@@ -60,7 +60,7 @@ function NavBar() {
                 </NavLink>
                 <NavLink
                   className="nav-link"
-                  to="/missions"
+                  to="/"
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
