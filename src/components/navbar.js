@@ -18,7 +18,7 @@ function NavBar() {
       <Navbar bg="light" expand="lg" className="mb-3">
         <Container fluid>
           <Navbar.Brand href="#" style={{ color: '#0290FF', paddingLeft: '12px' }}>
-            <img alt="planet log" src={logo} width={45} height={45} style={{ paddingRight: '12px' }} />
+            <img alt="planet log" src={logo} width={55} height={45} style={{ paddingRight: '12px' }} />
             {' '}
             WEATHER
           </Navbar.Brand>

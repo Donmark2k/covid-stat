@@ -2,7 +2,7 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="https://cdn.icon-icons.com/icons2/38/PNG/512/overcastday_weather_sun_cloudy_4493.png" alt="logo" width="140"  height="auto" />
+  <img src="https://cdn.icon-icons.com/icons2/883/PNG/512/3_icon-icons.com_68888.png" alt="logo" width="140"  height="auto" />
   <br/>
   <h3> 🚀 <b>Weather App</b> 🚀</h3>
 
