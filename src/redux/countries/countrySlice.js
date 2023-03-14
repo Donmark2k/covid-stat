@@ -1,3 +1,4 @@
+/* eslint no-underscore-dangle: ["error", { "allow": ["country.countryInfo._id", "_id"] }] */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -47,7 +48,7 @@ export const countrySlice = createSlice({
           country: country.country,
           cases: country.cases,
           deaths: country.deaths,
-          _id: country.countryInfo._id,
+          id: country.countryInfo._id,
           flag: country.countryInfo.flag,
         })),
         status: 'loaded',
