@@ -1,6 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
+import thunk from 'redux-thunk';
 import citiesReducer from './cities/city';
+
 
 const logger = createLogger({
   // Options for the logger can be passed here
@@ -14,7 +16,7 @@ const store = configureStore({
   reducer: {
     cities: citiesReducer,
   },
-  applyMiddleware:[thunk, logger],
+  applyMiddleware: [thunk, logger],
 });
 
 export default store;
