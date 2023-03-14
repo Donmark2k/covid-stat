@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+// import { NavLink, Link } from 'react-router-dom';
 import '../App.css';
 import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
+// import { BsGear, BsMic } from 'react-icons/bs';
+
 import logo from '../asset/planet.png';
-import { IoSettingsOutline } from 'react-icons/fa';
-import { BiMicrophone } from 'react-icons/fa';
-
-
-
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -42,21 +39,21 @@ function NavBar() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink
+                {/* <NavLink
                   className="nav-link"
                   to="/"
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                   <span className="profile">
-      <BiMicrophone style={{
-        color: '#0290FF',
-        height: '15px',
-        cursor: 'pointer',
-        transition: 'all ease-in 300ms',
-      }}
-      />
-    </span>
+                  <span className="profile">
+                    <BsMic style={{
+                      color: '#0290FF',
+                      height: '15px',
+                      cursor: 'pointer',
+                      transition: 'all ease-in 300ms',
+                    }}
+                    />
+                  </span>
                 </NavLink>
                 <NavLink
                   className="nav-link"
@@ -64,17 +61,17 @@ function NavBar() {
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                   <span className="profile">
-      <IoSettingsOutline style={{
-        color: '#0290FF',
-        height: '15px',
-        cursor: 'pointer',
-        transition: 'all ease-in 300ms',
-      }}
-      />
-    </span>
-                </NavLink>
-               
+                  <span className="profile">
+                    <BsGear style={{
+                      color: '#0290FF',
+                      height: '15px',
+                      cursor: 'pointer',
+                      transition: 'all ease-in 300ms',
+                    }}
+                    />
+                  </span>
+                </NavLink> */}
+
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

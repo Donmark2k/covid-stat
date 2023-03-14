@@ -58,7 +58,7 @@
 
 To run on your localhost clone the project to local folder
 
-- copy [this link](https://github.com/Donmark2k/space-traveler.git).
+- copy [this link](https://github.com/Donmark2k/weather-app.git).
 - get the directory that you want to clone the repository.
 - open the command prompt in this directory.
 - write git clone git@github.com:Donmark2k/space-traveler.git
@@ -84,7 +84,7 @@ In order to run this project you only need:
 
 To install this project in your local machine use
 
-- Clone the git repo using this command: `https://github.com/Donmark2k/space-traveler.git`
+- Clone the git repo using this command: `https://github.com/Donmark2k/weather-app.git`
 
 ### Usage
 
@@ -104,12 +104,6 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **zewdu erkyhun**
-
-- GitHub: [@zewdu444](https://github.com/zewdu444)
-- Twitter: [@zewdu444](https://twitter.com/zewdu444)
-- LinkedIn: [zewdu-erkyhun](https://www.linkedin.com/in/zewdu-erkyhun-081378b3/)
-
 👤 **Chukwuemeka Ochuba**
 
 - GitHub: [@Donmark2k](https://github.com/Donmark2k)
@@ -124,7 +118,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Donmark2k/space-traveler/issues).
+Feel free to check the [issues page](https://github.com/Donmark2k/weather-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,7 +130,7 @@ Feel free to check the [issues page](https://github.com/Donmark2k/space-traveler
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to appreciate [Microverse](https://www.microverse.org/) for providing the resources and the platform for us to be a Professional full-stack developer.
+I would like to appreciate [Microverse](https://www.microverse.org/) for providing the resources and the platform for us to be a Professional full-stack developer, and  I would specially thank   [ Nelson Sakwa](https://www.behance.net/sakwadesignstudio) who is the original author of this [design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
