@@ -43,10 +43,12 @@ export const countrySlice = createSlice({
       .addCase(fetchCountries.fulfilled, (state, action) => ({
         ...state,
         countryList: action.payload.map((country) => ({
-          updated: country.id,
-          country: country.name,
-          cases: country.description,
+          updated: country.updated,
+          country: country.country,
+          cases: country.cases,
           deaths: country.deaths,
+          _id: country.countryInfo._id,
+          flag: country.countryInfo.flag,
         })),
         status: 'loaded',
       }))
