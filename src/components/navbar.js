@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-// import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import '../App.css';
 import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
-// import { BsGear, BsMic } from 'react-icons/bs';
+import { BsGear, BsMic } from 'react-icons/bs';
 
 import logo from '../asset/planet.png';
 
@@ -17,9 +17,9 @@ function NavBar() {
     <div>
       <Navbar bg="light" expand="lg" className="mb-3">
         <Container fluid>
-          <Navbar.Brand href="#">
-            <img alt="planet log" src={logo} width={45} height={45} />
-            {'  '}
+          <Navbar.Brand href="#" style={{ color: '#0290FF', paddingLeft: '12px' }}>
+            <img alt="planet log" src={logo} width={45} height={45} style={{ paddingRight: '12px' }} />
+            {' '}
             WEATHER
           </Navbar.Brand>
           <Navbar.Toggle
@@ -38,8 +38,8 @@ function NavBar() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
-                {/* <NavLink
+              <Nav className="justify-content-end flex-grow-1 pe-5">
+                <NavLink
                   className="nav-link"
                   to="/"
                   as={Link}
@@ -48,7 +48,8 @@ function NavBar() {
                   <span className="profile">
                     <BsMic style={{
                       color: '#0290FF',
-                      height: '15px',
+                      height: '30px',
+                      width: '30px',
                       cursor: 'pointer',
                       transition: 'all ease-in 300ms',
                     }}
@@ -64,13 +65,14 @@ function NavBar() {
                   <span className="profile">
                     <BsGear style={{
                       color: '#0290FF',
-                      height: '15px',
+                      width: '30px',
+                      height: '30px',
                       cursor: 'pointer',
                       transition: 'all ease-in 300ms',
                     }}
                     />
                   </span>
-                </NavLink> */}
+                </NavLink>
 
               </Nav>
             </Offcanvas.Body>

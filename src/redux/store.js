@@ -3,7 +3,6 @@ import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import citiesReducer from './cities/city';
 
-
 const logger = createLogger({
   // Options for the logger can be passed here
   // Show only the actions in the console
