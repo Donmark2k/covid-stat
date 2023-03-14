@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/navbar';
-import Cities from './components/cities';
-import CityDetails from './components/cityDetails';
+import Countries from './components/country';
+import CountryDetails from './components/countryDetails';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Cities />} />
-        <Route path="/:cityID" element={<CityDetails />} />
+        <Route path="/" element={<Countries />} />
+        <Route path="/:cityID" element={<CountryDetails />} />
       </Routes>
     </div>
   );
