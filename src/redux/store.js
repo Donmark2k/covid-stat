@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
-import detailReducer from './detail/DetailSlice';
+import citiesReducer from './cities/city';
 
 const logger = createLogger({
   // Options for the logger can be passed here
@@ -12,8 +12,7 @@ const logger = createLogger({
 
 const store = configureStore({
   reducer: {
-    country: homeReducer,
-    city: detailReducer,
+    cities: citiesReducer,
   },
   applyMiddleware:[thunk, logger],
 });
