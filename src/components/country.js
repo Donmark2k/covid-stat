@@ -25,7 +25,7 @@ const Countries = () => {
       <Row style={{ display: 'flex', justifyContent: 'space-between' }}>
         {countries.map((country) => (
           <Card key={country.country.id} bg="light" style={{ width: '10rem', height: '12rem', margin: '4px' }}>
-            <Button style={{ width: '4rem', border: 'none', background: 'none' }} variant="primary">
+            <Button style={{ width: '4rem', border: 'none', background: 'none' }} className="see-more" variant="primary">
               <BsArrowRightCircle style={{
                 color: '#0290FF',
                 height: '20px',
