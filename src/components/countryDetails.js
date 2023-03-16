@@ -11,11 +11,8 @@ const CountryDetails = () => {
   const countries = useSelector((state) => state.countries.countryList);
   console.log(countries);
 
-  // const country = countries.find((c) => c.country.id === parseInt(id));
-  const country = countries.filter((c) => c.country.id === parseInt(id));
-
-  // newState.books = state.books.filter((book) => book.id !== id);
-
+  const country = countries.find((c) => c.id === parseInt(id));
+ 
   console.log(country);
 
 
