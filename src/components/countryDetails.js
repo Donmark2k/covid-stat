@@ -11,6 +11,7 @@ const CountryDetails = () => {
 
   return (
     <Container style={{ display: 'block', margin: 'auto', width: '50%' }}>
+        <h1>Hello World</h1>
       <Card bg="light" style={{ width: '100%', height: '100%' }}>
         <Card.Img variant="top" src={country.flag} alt="flag" style={{ width: 'auto', height: '250px' }} />
         <Card.Body>

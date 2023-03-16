@@ -93,7 +93,7 @@ const Countries = () => {
       <Row style={{ display: 'flex', justifyContent: 'space-between' }}>
         {countries.map((country) => (
           <Card key={country.country.id} bg="light" style={{ width: '10rem', height: '12rem', margin: '4px' }}>
-            <Link to={`/country/${country.country.id}`} style={{ width: '100%', height: '100%' }}>
+            <Link to={`/country/${country.id}`} style={{ width: '100%', height: '100%' }}>
               <Button style={{ width: '4rem', border: 'none', background: 'none' }} className="see-more" variant="primary">
                 <BsArrowRightCircle style={{
                   color: '#0290FF',
