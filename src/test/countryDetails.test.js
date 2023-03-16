@@ -51,6 +51,7 @@ import renderer from 'react-test-renderer';
 // import '@testing-library/jest-dom';
 import Countries from '../components/country';
 import store from '../redux/store';
+import axios from 'axios';
 
 describe('Test for countryDetails', () => {
   test('should render', () => {
