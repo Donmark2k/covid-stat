@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
-import rocketReducer from './rockets/rocketSlice';
-import missionReducer from './missions/missionSlice';
+import thunk from 'redux-thunk';
+import countryReducer from './countries/countrySlice';
 
 const logger = createLogger({
   // Options for the logger can be passed here
@@ -11,12 +11,11 @@ const logger = createLogger({
   collapsed: true,
 });
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
-    missions: missionReducer,
-    rockets: rocketReducer,
+    countries: countryReducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  applyMiddleware: [thunk, logger],
 });
 
 export default store;

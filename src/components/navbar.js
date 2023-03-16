@@ -1,24 +1,56 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import '../App.css';
 import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
+import { BsGear, BsMic, BsArrowLeftShort } from 'react-icons/bs';
+
 import logo from '../asset/planet.png';
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const location = useLocation();
 
   const handleOffcanvasClose = () => setShowOffcanvas(false);
   const handleOffcanvasToggle = () => setShowOffcanvas((prev) => !prev);
+
   return (
     <div>
       <Navbar bg="light" expand="lg" className="mb-3">
         <Container fluid>
-          <Navbar.Brand href="#">
-            <img alt="planet log" src={logo} width={45} height={45} />
-            {'  '}
-            Space Traveler&#39;s Hub
+          {location.pathname !== '/' && (
+            <Link
+              to="/"
+              className="navbar-brand"
+              style={{ color: '#0290FF', paddingLeft: '12px' }}
+            >
+              <span className="profile">
+                <BsArrowLeftShort
+                  style={{
+                    color: '#0290FF',
+                    height: '30px',
+                    width: '30px',
+                    cursor: 'pointer',
+                    transition: 'all ease-in 300ms',
+                  }}
+                />
+              </span>
+            </Link>
+          )}
+          <Navbar.Brand
+            href="#"
+            style={{ color: '#0290FF', paddingLeft: '12px' }}
+          >
+            <img
+              alt="planet log"
+              src={logo}
+              width={55}
+              height={45}
+              style={{ paddingRight: '12px' }}
+            />
+            {' '}
+            WEATHER
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
@@ -32,35 +64,46 @@ function NavBar() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                Space Traveler&#39;s Hub
+                Weather
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav className="justify-content-end flex-grow-1 pe-5">
                 <NavLink
                   className="nav-link"
                   to="/"
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                  Rockets
+                  <span className="profile">
+                    <BsMic
+                      style={{
+                        color: '#0290FF',
+                        height: '30px',
+                        width: '30px',
+                        cursor: 'pointer',
+                        transition: 'all ease-in 300ms',
+                      }}
+                    />
+                  </span>
                 </NavLink>
                 <NavLink
                   className="nav-link"
-                  to="/missions"
+                  to="/"
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                  Missions
-                </NavLink>
-                <div className="d-none d-md-none d-lg-block mt-3 mb-3 vr" />
-                <NavLink
-                  className="nav-link"
-                  to="/profile"
-                  as={Link}
-                  onClick={handleOffcanvasClose}
-                >
-                  My Profile
+                  <span className="profile">
+                    <BsGear
+                      style={{
+                        color: '#0290FF',
+                        width: '30px',
+                        height: '30px',
+                        cursor: 'pointer',
+                        transition: 'all ease-in 300ms',
+                      }}
+                    />
+                  </span>
                 </NavLink>
               </Nav>
             </Offcanvas.Body>

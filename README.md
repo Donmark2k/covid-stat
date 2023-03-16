@@ -2,9 +2,9 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="https://cdn-icons-png.flaticon.com/512/3212/3212567.png" alt="logo" width="140"  height="auto" />
+  <img src="https://cdn.icon-icons.com/icons2/883/PNG/512/3_icon-icons.com_68888.png" alt="logo" width="140"  height="auto" />
   <br/>
-  <h3> 🚀 <b>Space Travelers' Hub</b> 🚀</h3>
+  <h3> 🚀 <b>Weather App</b> 🚀</h3>
 
 </div>
 
@@ -30,7 +30,7 @@
 
 # 🚀 Space Travelers' Hub <a name="about-project"></a>
 
-<p> A web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.</p>
+<p> A weather app is a software application designed to provide users with up-to-date weather information for a specific location or region. The app typically uses a combination of real-time data from weather sensors, satellites, and other sources to provide accurate and reliable weather forecasts..</p>
 
 ## 🛠 Built With <a name="built-with"> </a>
 
@@ -58,7 +58,7 @@
 
 To run on your localhost clone the project to local folder
 
-- copy [this link](https://github.com/Donmark2k/space-traveler.git).
+- copy [this link](https://github.com/Donmark2k/weather-app.git).
 - get the directory that you want to clone the repository.
 - open the command prompt in this directory.
 - write git clone git@github.com:Donmark2k/space-traveler.git
@@ -84,7 +84,7 @@ In order to run this project you only need:
 
 To install this project in your local machine use
 
-- Clone the git repo using this command: `https://github.com/Donmark2k/space-traveler.git`
+- Clone the git repo using this command: `https://github.com/Donmark2k/weather-app.git`
 
 ### Usage
 
@@ -104,12 +104,6 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **zewdu erkyhun**
-
-- GitHub: [@zewdu444](https://github.com/zewdu444)
-- Twitter: [@zewdu444](https://twitter.com/zewdu444)
-- LinkedIn: [zewdu-erkyhun](https://www.linkedin.com/in/zewdu-erkyhun-081378b3/)
-
 👤 **Chukwuemeka Ochuba**
 
 - GitHub: [@Donmark2k](https://github.com/Donmark2k)
@@ -124,7 +118,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Donmark2k/space-traveler/issues).
+Feel free to check the [issues page](https://github.com/Donmark2k/weather-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,7 +130,7 @@ Feel free to check the [issues page](https://github.com/Donmark2k/space-traveler
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to appreciate [Microverse](https://www.microverse.org/) for providing the resources and the platform for us to be a Professional full-stack developer.
+I would like to appreciate [Microverse](https://www.microverse.org/) for providing the resources and the platform for us to be a Professional full-stack developer, and  I would specially thank   [ Nelson Sakwa](https://www.behance.net/sakwadesignstudio) who is the original author of this [design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
