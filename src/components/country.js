@@ -80,7 +80,6 @@ const Countries = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.countries.status);
   const countries = useSelector((state) => state.countries.countryList);
-  console.log(countries);
 
   useEffect(() => {
     if (status === 'idle') {

@@ -6,8 +6,12 @@ import Card from 'react-bootstrap/Card';
 
 const CountryDetails = () => {
   const { id } = useParams();
+  console.log(id);
+
   const countries = useSelector((state) => state.countries.countryList);
-  const country = countries.find((c) => c.country.id === id);
+  console.log(countries);
+
+  const country = countries.find((c) => c.country.id === parseInt(id));
 
   return (
     <Container style={{ display: 'block', margin: 'auto', width: '50%' }}>

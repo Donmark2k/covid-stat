@@ -10,7 +10,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Countries />} />
-        <Route path="/countries/:id" element={<CountryDetails />} />
+        <Route path="/country/:id" element={<CountryDetails />} />
       </Routes>
     </div>
   );
