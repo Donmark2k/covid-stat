@@ -1,68 +1,45 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
 
 const CountryDetails = () => {
+  const { id } = useParams();
+  const countries = useSelector((state) => state.countries.countryList);
+  const country = countries.find((c) => c.country.id === id);
 
-  
   return (
-    <div className="Container">
-      <div className="continent">
-        <h1>{name}</h1>
-        <img
-          src={findCountry.country_flag}
-          alt="national-flag"
-          className="national-flag1"
-        />
-      </div>
-      <div>
-        <ul className="today">
-          <h3> Today&apos;s update:</h3>
-          <li>
-            <h4>New cases:</h4>
+    <Container style={{ display: 'block', margin: 'auto', width: '50%' }}>
+      <Card bg="light" style={{ width: '100%', height: '100%' }}>
+        <Card.Img variant="top" src={country.flag} alt="flag" style={{ width: 'auto', height: '250px' }} />
+        <Card.Body>
+          <Card.Title style={{ fontSize: '24px', fontWeight: 'bold' }}>{country.country}</Card.Title>
+          <Card.Text style={{ fontSize: '18px' }}>
+            <strong>Total Cases:</strong>
             {' '}
-            {findCountry.todays_cases.toLocaleString()}
-          </li>
-          <li>
-            <h4>Confirmed deaths:</h4>
+            {country.cases}
+          </Card.Text>
+          <Card.Text style={{ fontSize: '18px' }}>
+            <strong>Recovered:</strong>
             {' '}
-            {findCountry.todays_deaths.toLocaleString()}
-          </li>
-          <li>
-            <h4>New Recoveries:</h4>
+            {country.recovered}
+          </Card.Text>
+          <Card.Text style={{ fontSize: '18px' }}>
+            <strong>Deaths:</strong>
             {' '}
-            {findCountry.todays_recovered.toLocaleString()}
-          </li>
-        </ul>
-        <ul className="total">
-          <h3>Total:</h3>
-          <li>
-            <h4>Confirmed cases:</h4>
+            {country.deaths}
+          </Card.Text>
+          <Card.Text style={{ fontSize: '18px' }}>
+            <strong>Active Cases:</strong>
             {' '}
-            {findCountry.total_cases.toLocaleString()}
-          </li>
-          <li>
-            <h4>Recovered:</h4>
-            {' '}
-            {findCountry.total_recovered.toLocaleString()}
-          </li>
-          <li>
-            <h4>Active Cases:</h4>
-            {' '}
-            {findCountry.total_active.toLocaleString()}
-          </li>
-          <li>
-            <h4>Total Tests:</h4>
-            {' '}
-            {findCountry.total_tests.toLocaleString()}
-          </li>
-          <li>
-            <h4>Deaths:</h4>
-            {' '}
-            {findCountry.total_deaths.toLocaleString()}
-          </li>
-        </ul>
-      </div>
-    </div>
-  )
-}
+            {country.active}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Container>
+
+  );
+};
 
 export default CountryDetails;
