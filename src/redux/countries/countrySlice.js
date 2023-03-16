@@ -22,20 +22,7 @@ export const fetchCountries = createAsyncThunk('country/fetchCountries', async (
 export const countrySlice = createSlice({
   name: 'countries',
   initialState,
-  reducers: {
-    // reserveRocket: (state, payload) => ({
-    //   ...state,
-    //   rocketList: state.rocketList.map((rocket) => {
-    //     if (rocket.id === payload.payload) {
-    //       if (rocket.reserved === true) {
-    //         return { ...rocket, reserved: false };
-    //       }
-    //       return { ...rocket, reserved: true };
-    //     }
-    //     return rocket;
-    //   }),
-    // }),
-  },
+  reducers: { },
   extraReducers(builder) {
     builder.addCase(fetchCountries.pending, (state) => ({
       ...state,
@@ -47,7 +34,12 @@ export const countrySlice = createSlice({
           updated: country.updated,
           country: country.country,
           cases: country.cases,
+          tests: country.tests,
           deaths: country.deaths,
+          population: country.population,
+          recovered: country.recovered,
+          active: country.active,
+          critical: country.critical,
           id: country.countryInfo._id,
           flag: country.countryInfo.flag,
         })),
