@@ -6,19 +6,15 @@ import Card from 'react-bootstrap/Card';
 
 const CountryDetails = () => {
   const { id } = useParams();
-  console.log(id);
 
   const countries = useSelector((state) => state.countries.countryList);
-  console.log(countries);
-
-  const country = countries.find((c) => c.id === parseInt(id));
- 
-  console.log(country);
+  // const country = countries.find((c) => c.id === parseInt(id));
+  const country = countries.find((c) => c.id === parseInt(id, 10));
 
 
   return (
     <Container style={{ display: 'block', margin: 'auto', width: '50%' }}>
-        <h1>Hello World</h1>
+      <h1>Hello World</h1>
       <Card bg="light" style={{ width: '100%', height: '100%' }}>
         <Card.Img variant="top" src={country.flag} alt="flag" style={{ width: 'auto', height: '250px' }} />
         <Card.Body>
