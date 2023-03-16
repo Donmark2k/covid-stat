@@ -86,7 +86,6 @@ const Countries = () => {
       dispatch(fetchCountries());
     }
   }, [status, dispatch]);
-
   return (
     <Container style={{ display: 'block', margin: 'auto', width: '90%' }}>
       <Row style={{ display: 'flex', justifyContent: 'space-between' }}>
