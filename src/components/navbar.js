@@ -5,21 +5,24 @@ import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
 import { BsGear, BsMic, BsArrowLeftShort } from 'react-icons/bs';
-import {searchField} from '../redux/countries/countrySlice';
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
+import { searchField } from '../redux/countries/countrySlice';
 import logo from '../asset/planet.png';
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
+
   const location = useLocation();
   const dispatch = useDispatch();
   const handleOffcanvasClose = () => setShowOffcanvas(false);
   const handleOffcanvasToggle = () => setShowOffcanvas((prev) => !prev);
   const searchHandler = (e) => {
-    console.log(e.target.value)
-    dispatch(searchField(e.target.value));
-  }
+    setSearchValue(e.target.value);
 
+    dispatch(searchField(e.target.value));
+  };
+  
   return (
     <div>
       <Navbar bg="light" expand="lg" className="mb-3">
@@ -29,6 +32,10 @@ function NavBar() {
               to="/"
               className="navbar-brand"
               style={{ color: '#0290FF', paddingLeft: '12px' }}
+              onClick={() => {
+                setSearchValue('');
+                dispatch(searchField(''));
+              }}
             >
               <span className="profile">
                 <BsArrowLeftShort
@@ -55,7 +62,6 @@ function NavBar() {
               style={{ paddingRight: '4px' }}
             />
             {' '}
-
             COVID-STAT
           </Navbar.Brand>
           {location.pathname === '/' && (
@@ -65,6 +71,7 @@ function NavBar() {
                 placeholder="Search ..."
                 className="form-control me-1"
                 style={{ width: '130px' }}
+                value={searchValue}
                 onChange={searchHandler}
               />
             </div>
