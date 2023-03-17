@@ -12,6 +12,19 @@ const Countries = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.countries.status);
   const countries = useSelector((state) => state.countries.countryList);
+  const searchCountry = useSelector((state) => state.countries.search);
+
+  const displayCountries = () => {
+    if (searchCountry === undefined) {
+      return countries;
+    }
+
+    const filtered = countries.filter(
+      (country) => country.country.toLowerCase().includes(searchCountry.toLowerCase()),
+    );
+
+    return filtered;
+  };
 
   useEffect(() => {
     if (status === 'idle') {
@@ -21,18 +34,30 @@ const Countries = () => {
   return (
     <Container style={{ display: 'block', margin: 'auto', width: '90%' }}>
       <Row style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {countries.map((country) => (
-          <Card key={country.country.id} bg="light" style={{ width: '10rem', height: '12rem', margin: '4px' }}>
-            <Link to={`/country/${country.id}`} style={{ width: '100%', height: '100%' }}>
-              <Button style={{ width: '4rem', border: 'none', background: 'none' }} className="see-more" variant="primary">
-                <BsArrowRightCircle style={{
-                  color: '#0290FF',
-                  height: '20px',
-                  width: '20px',
-                  cursor: 'pointer',
-                  transition: 'all ease-in 300ms',
-                  marginLeft: '250%',
-                }}
+        {displayCountries().map((country) => (
+          <Card
+            key={country.country.id}
+            bg="light"
+            style={{ width: '10rem', height: '12rem', margin: '4px' }}
+          >
+            <Link
+              to={`/country/${country.id}`}
+              style={{ width: '100%', height: '100%' }}
+            >
+              <Button
+                style={{ width: '4rem', border: 'none', background: 'none' }}
+                className="see-more"
+                variant="primary"
+              >
+                <BsArrowRightCircle
+                  style={{
+                    color: '#0290FF',
+                    height: '20px',
+                    width: '20px',
+                    cursor: 'pointer',
+                    transition: 'all ease-in 300ms',
+                    marginLeft: '250%',
+                  }}
                 />
               </Button>
             </Link>
@@ -41,19 +66,32 @@ const Countries = () => {
               src={country.flag}
               alt="flag"
               style={{
-                width: '8.3rem', opacity: '0.5', padding: 'auto', height: '4rem',
+                width: '8.3rem',
+                opacity: '0.5',
+                padding: 'auto',
+                height: '4rem',
               }}
             />
             <Card.Body>
-              <Card.Title style={{
-                fontSize: '14px', color: '#0290FF', fontWeight: 'bold', width: '100%', textAlign: 'center',
-              }}
+              <Card.Title
+                style={{
+                  fontSize: '14px',
+                  color: '#0290FF',
+                  fontWeight: 'bold',
+                  width: '100%',
+                  textAlign: 'center',
+                }}
               >
                 {country.country}
               </Card.Title>
-              <Card.Text style={{
-                fontSize: '12px', color: '#000000', fontWeight: 'bold', width: '100%', textAlign: 'right',
-              }}
+              <Card.Text
+                style={{
+                  fontSize: '12px',
+                  color: '#000000',
+                  fontWeight: 'bold',
+                  width: '100%',
+                  textAlign: 'right',
+                }}
               >
                 {country.cases}
               </Card.Text>

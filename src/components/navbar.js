@@ -5,15 +5,23 @@ import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
 import { BsGear, BsMic, BsArrowLeftShort } from 'react-icons/bs';
-
+import { useDispatch } from 'react-redux';
+import { searchField } from '../redux/countries/countrySlice';
 import logo from '../asset/planet.png';
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const location = useLocation();
+  const [searchValue, setSearchValue] = useState('');
 
+  const location = useLocation();
+  const dispatch = useDispatch();
   const handleOffcanvasClose = () => setShowOffcanvas(false);
   const handleOffcanvasToggle = () => setShowOffcanvas((prev) => !prev);
+  const searchHandler = (e) => {
+    setSearchValue(e.target.value);
+
+    dispatch(searchField(e.target.value));
+  };
 
   return (
     <div>
@@ -24,6 +32,10 @@ function NavBar() {
               to="/"
               className="navbar-brand"
               style={{ color: '#0290FF', paddingLeft: '12px' }}
+              onClick={() => {
+                setSearchValue('');
+                dispatch(searchField(''));
+              }}
             >
               <span className="profile">
                 <BsArrowLeftShort
@@ -40,18 +52,31 @@ function NavBar() {
           )}
           <Navbar.Brand
             href="#"
-            style={{ color: '#0290FF', paddingLeft: '12px' }}
+            style={{ color: '#0290FF', paddingLeft: '12px', fontSize: '12px' }}
           >
             <img
               alt="planet log"
               src={logo}
               width={55}
               height={45}
-              style={{ paddingRight: '12px' }}
+              style={{ paddingRight: '4px' }}
             />
             {' '}
-            WEATHER
+            COVID-STAT
           </Navbar.Brand>
+          {location.pathname === '/' && (
+            <div className="">
+              <input
+                type="text"
+                placeholder="Search ..."
+                className="form-control me-1"
+                style={{ width: '130px' }}
+                value={searchValue}
+                onChange={searchHandler}
+              />
+            </div>
+          )}
+
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
             onClick={handleOffcanvasToggle}
@@ -64,7 +89,7 @@ function NavBar() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                Weather
+                covid-stat
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

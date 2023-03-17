@@ -8,6 +8,7 @@ const initialState = {
   countryList: [],
   status: 'idle',
   error: null,
+  search: '',
 };
 
 export const fetchCountries = createAsyncThunk('country/fetchCountries', async () => {
@@ -22,7 +23,12 @@ export const fetchCountries = createAsyncThunk('country/fetchCountries', async (
 export const countrySlice = createSlice({
   name: 'countries',
   initialState,
-  reducers: { },
+  reducers: {
+    searchField: (state, payload) => ({
+      ...state,
+      search: payload.payload,
+    }),
+  },
   extraReducers(builder) {
     builder.addCase(fetchCountries.pending, (state) => ({
       ...state,
@@ -53,5 +59,5 @@ export const countrySlice = createSlice({
   },
 
 });
-
+export const { searchField } = countrySlice.actions;
 export default countrySlice.reducer;
