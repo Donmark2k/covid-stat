@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import axios from 'axios';
 import Countries from '../components/country';
-import { store } from '../redux/store';
+import store from '../redux/store';
 import { fetchCountries } from '../redux/countries/countrySlice';
 
 it('Country  page renders correctly', () => {
@@ -22,29 +22,12 @@ it('Country  page renders correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-// describe('Test for Country', () => {
-//   test('should render', () => {
-//     const country = {
-//       id: 24,
-//       country: 'Angola',
-//       cases: '105298',
-//     };
-//     const tree = renderer
-//        .create (
-//       <Provider store={store}>
-//         <Countries countries={country} key={24} />
-//       </Provider>,
-//     );
-//     expect(tree).toMatchSnapshot();
-//   });
-// });
-
 // Country  slicer and reducer check
 describe('Countries redux state tests', () => {
-  // it('Should initially hold country data by default', () => {
-  //   const state = store.getState().countries;
-  //   expect(state.countryList.length).toEqual(0);
-  // });
+  it('Should initially hold country data by default', () => {
+    const state = store.getState().countries;
+    expect(state.countryList.length).toEqual(0);
+  });
 
   it('Rockets fetch data from API', async () => {
     const url = 'https://disease.sh/v3/covid-19/countries';
