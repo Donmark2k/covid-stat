@@ -59,10 +59,10 @@
 
 To run on your localhost clone the project to local folder
 
-- copy [this link](https://github.com/Donmark2k/weather-app.git).
+- copy [this link](https://github.com/Donmark2k/covid-stat.git).
 - get the directory that you want to clone the repository.
 - open the command prompt in this directory.
-- write git clone git@github.com:Donmark2k/space-traveler.git
+- write git clone git@github.com:Donmark2k/covid-stat.git
 - go to the repository folder in your command prompt cd Space-travellers
 - use npm install to install the dependencies.
 - use npm start to start live server.
@@ -85,7 +85,7 @@ In order to run this project you only need:
 
 To install this project in your local machine use
 
-- Clone the git repo using this command: `https://github.com/Donmark2k/weather-app.git`
+- Clone the git repo using this command: `https://github.com/Donmark2k/covid-stat.git`
 
 ### Usage
 
@@ -119,7 +119,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Donmark2k/weather-app/issues).
+Feel free to check the [issues page](https://github.com/Donmark2k/covid-stat/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
