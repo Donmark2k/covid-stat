@@ -4,7 +4,6 @@ import renderer from 'react-test-renderer';
 import Countries from '../components/country';
 import store from '../redux/store';
 
-
 describe('Test for countryDetails', () => {
   test('should render', () => {
     const country = {

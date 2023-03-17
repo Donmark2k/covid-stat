@@ -8,7 +8,7 @@ import { store } from '../redux/store';
 import { fetchCountries } from '../redux/countries/countrySlice';
 
 it('Country  page renders correctly', () => {
- const tree = renderer
+  const tree = renderer
     .create(
       <React.StrictMode>
         <Provider store={store}>
@@ -27,7 +27,7 @@ it('Country  page renders correctly', () => {
 //     const country = {
 //       id: 24,
 //       country: 'Angola',
-//       cases: '105298',     
+//       cases: '105298',
 //     };
 //     const tree = renderer
 //        .create (
@@ -55,4 +55,3 @@ describe('Countries redux state tests', () => {
     expect(axiosSpy).toHaveBeenCalledWith(url);
   });
 });
-
