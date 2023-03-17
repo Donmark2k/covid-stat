@@ -22,7 +22,7 @@ function NavBar() {
 
     dispatch(searchField(e.target.value));
   };
-  
+
   return (
     <div>
       <Navbar bg="light" expand="lg" className="mb-3">

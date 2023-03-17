@@ -4,7 +4,7 @@
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <img src="https://cdn.icon-icons.com/icons2/883/PNG/512/3_icon-icons.com_68888.png" alt="logo" width="140"  height="auto" />
   <br/>
-  <h3> 🚀 <b>Weather App</b> 🚀</h3>
+  <h3> 🚀 <b>Covid Statistics</b> 🚀</h3>
 
 </div>
 
@@ -28,7 +28,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 🚀 Space Travelers' Hub <a name="about-project"></a>
+# 🚀 Covid Statistics' Hub <a name="about-project"></a>
 
 <p> A weather app is a software application designed to provide users with up-to-date weather information for a specific location or region. The app typically uses a combination of real-time data from weather sensors, satellites, and other sources to provide accurate and reliable weather forecasts..</p>
 
