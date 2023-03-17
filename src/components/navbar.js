@@ -50,7 +50,7 @@ function NavBar() {
               style={{ paddingRight: '12px' }}
             />
             {' '}
-            WEATHER
+            COVID-STAT
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="offcanvasNavbar"
@@ -64,7 +64,7 @@ function NavBar() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
-                Weather
+                covid-stat
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
