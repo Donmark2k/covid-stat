@@ -49,6 +49,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 - Here is a [Live Demo Link](https://covidst.netlify.app/)
+- Here is a [Live video Link](https://www.loom.com/share/b7bb9189a9364e7aa6406052c126af98)
+
 ## Project Screenshots
 
 ![Home page](./src/asset/screenshot.png)
