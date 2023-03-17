@@ -1,38 +1,38 @@
-import React, { useState } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
-import '../App.css';
-import {
-  Nav, Navbar, Container, Offcanvas,
-} from 'react-bootstrap';
-import { BsGear, BsMic, BsArrowLeftShort } from 'react-icons/bs';
+import React, { useState } from "react";
+import { NavLink, Link, useLocation } from "react-router-dom";
+import "../App.css";
+import { Nav, Navbar, Container, Offcanvas } from "react-bootstrap";
+import { BsGear, BsMic, BsArrowLeftShort } from "react-icons/bs";
 
-import logo from '../asset/planet.png';
+import logo from "../asset/planet.png";
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const location = useLocation();
 
   const handleOffcanvasClose = () => setShowOffcanvas(false);
-  const handleOffcanvasToggle = () => setShowOffcanvas((prev) => !prev);
+  const handleOffcanvasToggle = () => setShowOffcanvas(prev => !prev);
+  const [searchTerm, setSearchTerm] = useState('');
+
 
   return (
     <div>
       <Navbar bg="light" expand="lg" className="mb-3">
         <Container fluid>
-          {location.pathname !== '/' && (
+          {location.pathname !== "/" && (
             <Link
               to="/"
               className="navbar-brand"
-              style={{ color: '#0290FF', paddingLeft: '12px' }}
+              style={{ color: "#0290FF", paddingLeft: "12px" }}
             >
               <span className="profile">
                 <BsArrowLeftShort
                   style={{
-                    color: '#0290FF',
-                    height: '30px',
-                    width: '30px',
-                    cursor: 'pointer',
-                    transition: 'all ease-in 300ms',
+                    color: "#0290FF",
+                    height: "30px",
+                    width: "30px",
+                    cursor: "pointer",
+                    transition: "all ease-in 300ms"
                   }}
                 />
               </span>
@@ -40,26 +40,25 @@ function NavBar() {
           )}
           <Navbar.Brand
             href="#"
-            style={{ color: '#0290FF', paddingLeft: '12px', fontSize: '12px' }}
+            style={{ color: "#0290FF", paddingLeft: "12px", fontSize: "12px" }}
           >
             <img
               alt="planet log"
               src={logo}
               width={55}
               height={45}
-              style={{ paddingRight: '4px' }}
-            />
-            {' '}
-
+              style={{ paddingRight: "4px" }}
+            />{" "}
             COVID-STAT
           </Navbar.Brand>
-          {location.pathname === '/' && (
+          {location.pathname === "/" && (
             <div className="">
               <input
                 type="text"
                 placeholder="Search ..."
                 className="form-control me-1"
-                style={{ width: '130px' }}
+                style={{ width: "130px" }}
+                onChange={e => setSearchTerm(e.target.value)}
               />
             </div>
           )}
@@ -90,11 +89,11 @@ function NavBar() {
                   <span className="profile">
                     <BsMic
                       style={{
-                        color: '#0290FF',
-                        height: '30px',
-                        width: '30px',
-                        cursor: 'pointer',
-                        transition: 'all ease-in 300ms',
+                        color: "#0290FF",
+                        height: "30px",
+                        width: "30px",
+                        cursor: "pointer",
+                        transition: "all ease-in 300ms"
                       }}
                     />
                   </span>
@@ -108,11 +107,11 @@ function NavBar() {
                   <span className="profile">
                     <BsGear
                       style={{
-                        color: '#0290FF',
-                        width: '30px',
-                        height: '30px',
-                        cursor: 'pointer',
-                        transition: 'all ease-in 300ms',
+                        color: "#0290FF",
+                        width: "30px",
+                        height: "30px",
+                        cursor: "pointer",
+                        transition: "all ease-in 300ms"
                       }}
                     />
                   </span>
