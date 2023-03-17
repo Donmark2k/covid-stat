@@ -5,15 +5,20 @@ import {
   Nav, Navbar, Container, Offcanvas,
 } from 'react-bootstrap';
 import { BsGear, BsMic, BsArrowLeftShort } from 'react-icons/bs';
-
+import {searchField} from '../redux/countries/countrySlice';
+import { useDispatch } from "react-redux";
 import logo from '../asset/planet.png';
 
 function NavBar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const location = useLocation();
-
+  const dispatch = useDispatch();
   const handleOffcanvasClose = () => setShowOffcanvas(false);
   const handleOffcanvasToggle = () => setShowOffcanvas((prev) => !prev);
+  const searchHandler = (e) => {
+    console.log(e.target.value)
+    dispatch(searchField(e.target.value));
+  }
 
   return (
     <div>
@@ -60,6 +65,7 @@ function NavBar() {
                 placeholder="Search ..."
                 className="form-control me-1"
                 style={{ width: '130px' }}
+                onChange={searchHandler}
               />
             </div>
           )}

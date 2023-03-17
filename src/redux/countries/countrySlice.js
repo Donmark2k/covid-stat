@@ -8,6 +8,7 @@ const initialState = {
   countryList: [],
   status: 'idle',
   error: null,
+  search: '',
 };
 
 export const fetchCountries = createAsyncThunk('country/fetchCountries', async () => {
@@ -25,7 +26,7 @@ export const countrySlice = createSlice({
   reducers: {
     searchField: (state, payload) => ({
       ...state,
-      searchresult: payload.payload,
+      search: payload.payload,
     }),
   },
   extraReducers(builder) {

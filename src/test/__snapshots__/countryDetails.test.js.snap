@@ -12,6 +12,40 @@ exports[`Test for countryDetails should render 1`] = `
   }
 >
   <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-between",
+        "marginBottom": "1rem",
+      }
+    }
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Search countries"
+      style={
+        Object {
+          "marginRight": "1rem",
+          "maxWidth": "400px",
+          "width": "100%",
+        }
+      }
+      type="text"
+      value=""
+    />
+    <span
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+    >
+      0
+       
+      countries
+    </span>
+  </div>
+  <div
     className="row"
     style={
       Object {

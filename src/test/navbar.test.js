@@ -2,17 +2,17 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
-import { store } from '../redux/store';
+import { ErrorBoundary } from 'react-error-boundary';
+import store from '../redux/store';
 import NavBar from '../components/navbar';
 import App from '../App';
-import { ErrorBoundary } from 'react-error-boundary';
 
 function MyFallbackComponent({ error, resetErrorBoundary }) {
   return (
     <div>
       <h2>Something went wrong:</h2>
       <p>{error.message}</p>
-      <button onClick={resetErrorBoundary}>Try again</button>
+      <button type="button" onClick={resetErrorBoundary}>Try again</button>
     </div>
   );
 }
