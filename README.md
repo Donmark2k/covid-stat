@@ -28,21 +28,22 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 🚀 Covid Statistics' Hub <a name="about-project"></a>
+# 🚀 Covid Statistics <a name="about-project"></a>
 
-<p> A weather app is a software application designed to provide users with up-to-date weather information for a specific location or region. The app typically uses a combination of real-time data from weather sensors, satellites, and other sources to provide accurate and reliable weather forecasts..</p>
+<p> A COVID-19 statistics app is a mobile application designed to provide up-to-date information on the number of confirmed cases, deaths, and recoveries from the COVID-19 pandemic. The app can help users track the current situation of the pandemic in their country or region, and also provide information on the trends and patterns of the virus globally. </p>
 
 ## 🛠 Built With <a name="built-with"> </a>
 
-> HTML 5 , css3, javascript ES6, React , Redux and external API
+-  HTML 5 , css3, javascript ES6, React , Redux and external API
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> React, redux, axios, jest webpack and babel
+-  React, redux, axios, jest webpack and babel
 
 ### Key Features <a name="key-features"></a>
 
- <li>Space Travelers' Hub</li>
+ <li>User can filter the country of their choice</li>
+  <li>The app display the information from API</li>
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
