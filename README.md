@@ -48,7 +48,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p><!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- Here is a [Live Demo Link](https://spaceth.netlify.app/)
+- Here is a [Live Demo Link](https://covidst.netlify.app/)
 ## Project Screenshots
 
 ![Home page](./src/asset/screenshot.png)
