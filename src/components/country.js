@@ -32,11 +32,11 @@ const Countries = () => {
     }
   }, [status, dispatch]);
   return (
-    <Container style={{ display: 'block', margin: 'auto', width: '90%' }}>
-      <Row style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <Container style={{ display: 'block', margin: 'auto', width: '95%' }}>
+      <Row style={{ display: 'flex', justifyContent: 'center' }}>
         {displayCountries().map((country) => (
           <Card
-            key={country.country.id}
+            key={country.country}
             bg="light"
             style={{ width: '10rem', height: '12rem', margin: '4px' }}
           >
