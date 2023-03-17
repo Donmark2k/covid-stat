@@ -35,7 +35,7 @@ const Countries = () => {
   return (
     <Container style={{ display: "block", margin: "auto", width: "90%" }}>
       <Row style={{ display: "flex", justifyContent: "space-between" }}>
-        {countries.map(country => (
+        {displayCountries().map(country => (
           <Card
             key={country.country.id}
             bg="light"
