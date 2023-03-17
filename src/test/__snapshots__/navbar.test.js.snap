@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App  page renders correctly 1`] = `
+<div>
+  <h2>
+    Something went wrong:
+  </h2>
+  <p>
+    Cannot read properties of undefined (reading 'getState')
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Try again
+  </button>
+</div>
+`;
+
+exports[`Navbar page renders correctly 1`] = `
+<div>
+  <h2>
+    Something went wrong:
+  </h2>
+  <p>
+    Cannot read properties of undefined (reading 'getState')
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Try again
+  </button>
+</div>
+`;
