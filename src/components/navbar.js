@@ -70,7 +70,7 @@ function NavBar() {
                 type="text"
                 placeholder="Search ..."
                 className="form-control me-1"
-                style={{ width: '130px' }}
+                style={{ width: '120px' }}
                 value={searchValue}
                 onChange={searchHandler}
               />
