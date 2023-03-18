@@ -52,7 +52,7 @@ function NavBar() {
           )}
           <Navbar.Brand
             href="#"
-            style={{ color: '#0290FF', paddingLeft: '12px', fontSize: '12px' }}
+            style={{ color: '#0290FF', paddingLeft: '1%', fontSize: '12px' }}
           >
             <img
               alt="planet log"
