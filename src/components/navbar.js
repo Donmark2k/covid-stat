@@ -100,7 +100,7 @@ function NavBar() {
                   as={Link}
                   onClick={handleOffcanvasClose}
                 >
-                  <span className="profile">
+                  <span className="">
                     <BsMic
                       style={{
                         color: '#0290FF',
