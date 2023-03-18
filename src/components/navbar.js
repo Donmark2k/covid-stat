@@ -52,14 +52,14 @@ function NavBar() {
           )}
           <Navbar.Brand
             href="#"
-            style={{ color: '#0290FF', paddingLeft: '1%', fontSize: '12px' }}
+            style={{ color: '#0290FF', paddingLeft: '1%', fontSize: '10px' }}
           >
             <img
               alt="planet log"
               src={logo}
               width={55}
               height={45}
-              style={{ paddingRight: '4px' }}
+              style={{ paddingRight: '2px' }}
             />
             {' '}
             COVID-STAT
@@ -68,7 +68,7 @@ function NavBar() {
             <div className="">
               <input
                 type="text"
-                placeholder="Search ..."
+                placeholder="search ..."
                 className="form-control me-1"
                 style={{ width: '120px' }}
                 value={searchValue}
